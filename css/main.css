@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*
+font-family: 'PT Sans', sans-serif;*/
+
+/*text: #0B1942
+inline link: #00B7D3
+h2 background: #0B1942
+h2 color: #FFFFFF
+logo background: #F5005B
+navigation background: #7DDFE8
+navigation link color: #FFFFFF
+"Home" nav link background: #00A5BF
+"Calendar" nav link background: #00B7D3
+"Join" nav link background: #00D5E7
+"Up Next" background: #0B1942
+"Up Next" card background #E2E2E2
+calendar background and treatments: #0B1942
+calendar highlighted day: #F5005B
+button background: #F5005B
+copyright text: #FFFFFF*/
+
+/*BREAKPOINTS
+
+smart  -- 320px -- 544px
+tablet -- 545px -- 768px
+laptop -- 769px -- + and up*/
+
+/*---------------- Break Code ----------------*/
+
+.body-nest {
+  border: 2px solid blue;
+  flex-flow: column nowrap;
+  flex-wrap: wrap;
+  background-color: aqua;
+  margin: 1% 1%;
+}
+
+.nav-nest {
+  background-color: #7DDFE8;
+  display:flex;
+  flex-flow: row wrap;
+}
+
+.icon-nest {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  order: 1;
+}
+
+.anchor-icon {
+  background-color: #F5005B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 39%;
+}
+
+.button-nest {
+  background-color: yellow;
+  display:flex;
+  flex-flow: row wrap;
+  order: 2;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 60%;
+}
+
+.anchor-icon, .button-01, .button-02, button-03 {
+  flex: 1 100%;
+}
+
+.button-01, .button-02, .button-03 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 98%;
+}
+
+.button-01 a, .button-02 a, .button-03 a {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.button-01 {
+  background-color: #00A5BF;
+  order: 1;
+}
+
+ .button-02 {
+  background-color: #00B7D3;
+  order: 2;
+}
+
+ .button-03 {
+  background-color: #00D5E7;
+  order: 3;
+}
+
+main {
+  margin-left: 5%;
+  margin-right: 10%
+}
+
+/*---------------- Break Code ----------------*/
+
+@media screen and (min-width: 545px) {
+  .button-01, .button-02, .button-03 {
+    flex-basis: 10vw;
+  }
+  .button-nest {
+    justify-content: flex-start;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 45%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .anchor-icon { flex: 2 0px; }
+
+  .anchor-icon  { order: 1; }
+  .button-01    { order: 2; }
+  .button-02    { order: 3; }
+  .button-03    { order: 4; }
+}
