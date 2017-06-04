@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  /*background-color: lightgray;*/
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -10,23 +11,23 @@ html {
 
 /*
 font-family: 'PT Sans', sans-serif;*/
-
-/*text: #0B1942
-inline link: #00B7D3
-h2 background: #0B1942
-h2 color: #FFFFFF
-logo background: #F5005B
-navigation background: #7DDFE8
-navigation link color: #FFFFFF
-"Home" nav link background: #00A5BF
-"Calendar" nav link background: #00B7D3
-"Join" nav link background: #00D5E7
-"Up Next" background: #0B1942
-"Up Next" card background #E2E2E2
-calendar background and treatments: #0B1942
-calendar highlighted day: #F5005B
-button background: #F5005B
-copyright text: #FFFFFF*/
+/*
+x  text: #0B1942
+  inline link: #00B7D3
+x  h2 background: #0B1942
+x  h2 color: #FFFFFF
+x  logo background: #F5005B
+x  navigation background: #7DDFE8
+x  navigation link color: #FFFFFF
+x  "Home" nav link background: #00A5BF
+x  "Calendar" nav link background: #00B7D3
+x  "Join" nav link background: #00D5E7
+  "Up Next" background: #0B1942
+  "Up Next" card background #E2E2E2
+  calendar background and treatments: #0B1942
+  calendar highlighted day: #F5005B
+  button background: #F5005B
+  copyright text: #FFFFFF*/
 
 /*BREAKPOINTS
 
@@ -37,11 +38,10 @@ laptop -- 769px -- + and up*/
 /*---------------- Break Code ----------------*/
 
 .body-nest {
-  border: 2px solid blue;
+  /*border: 2px solid blue;*/
   flex-flow: column nowrap;
-  flex-wrap: wrap;
-  background-color: aqua;
-  margin: 1% 1%;
+  /*background-color: lightgray;*/
+  /*margin: 1% 1%;*/
 }
 
 .nav-nest {
@@ -51,6 +51,7 @@ laptop -- 769px -- + and up*/
 }
 
 .icon-nest {
+  background-color: #F5005B;
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -58,7 +59,6 @@ laptop -- 769px -- + and up*/
 }
 
 .anchor-icon {
-  background-color: #F5005B;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +69,6 @@ laptop -- 769px -- + and up*/
 }
 
 .button-nest {
-  background-color: yellow;
   display:flex;
   flex-flow: row wrap;
   order: 2;
@@ -78,11 +77,11 @@ laptop -- 769px -- + and up*/
   flex-basis: 60%;
 }
 
-.anchor-icon, .button-01, .button-02, button-03 {
+.anchor-icon, .button-01, .button-02, .button-03, .copy-right {
   flex: 1 100%;
 }
 
-.button-01, .button-02, .button-03 {
+.button-01, .button-02, .button-03, .copy-right {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,7 +94,24 @@ laptop -- 769px -- + and up*/
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 20px 2px;
   color: #FFFFFF;
+}
+
+.copy-right a {
+ text-align: center;
+ text-transform: uppercase;
+ text-decoration: none;
+ padding: 40px 5px;
+ color: #FFFFFF;
+}
+
+#active {
+  background-color: #F5005B;
+}
+
+.button-nest div:hover:not(#active) {
+    background-color: #0B1942;
 }
 
 .button-01 {
@@ -113,9 +129,26 @@ laptop -- 769px -- + and up*/
   order: 3;
 }
 
+.copy-right {
+ order: 4;
+}
+
 main {
-  margin-left: 5%;
-  margin-right: 10%
+  /*background-color: white;*/
+  margin: 20px;
+}
+
+.top-container h1 {
+  color: ;
+}
+
+.top-container h2 {
+  background-color: #0B1942;
+  color: #FFFFFF;
+}
+
+.base-container h1 {
+
 }
 
 /*---------------- Break Code ----------------*/
@@ -124,19 +157,31 @@ main {
   .button-01, .button-02, .button-03 {
     flex-basis: 10vw;
   }
+
+  .copy-right {
+    flex-basis: 20vw;
+    justify-content: flex-end;
+  }
+
   .button-nest {
     justify-content: flex-start;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 45%;
   }
+
+  .copy-right a {
+    text-align: right;
+  }
+
 }
 
 @media screen and (min-width: 769px) {
   .anchor-icon { flex: 2 0px; }
 
-  .anchor-icon  { order: 1; }
-  .button-01    { order: 2; }
-  .button-02    { order: 3; }
-  .button-03    { order: 4; }
+  .anchor-icon  { order: 1;}
+  .button-01    { order: 2;}
+  .button-02    { order: 3;}
+  .button-03    { order: 4;}
+  .copy-right   { order: 5;}
 }
