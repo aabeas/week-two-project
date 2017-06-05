@@ -133,13 +133,12 @@ laptop -- 769px -- + and up*/
  order: 4;
 }
 
-main {
-  /*background-color: white;*/
+.top-container {
   margin: 20px;
 }
 
 .top-container h1 {
-  color: ;
+  color: #0B1942;
 }
 
 .top-container h2 {
@@ -147,8 +146,12 @@ main {
   color: #FFFFFF;
 }
 
-.base-container h1 {
+.base-container {
+  background-color: #0B1942;
+}
 
+.base-container h1 {
+  color: #FFFFFF;
 }
 
 /*---------------- Break Code ----------------*/
