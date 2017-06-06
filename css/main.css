@@ -22,12 +22,12 @@ x  navigation link color: #FFFFFF
 x  "Home" nav link background: #00A5BF
 x  "Calendar" nav link background: #00B7D3
 x  "Join" nav link background: #00D5E7
-  "Up Next" background: #0B1942
-  "Up Next" card background #E2E2E2
+x  "Up Next" background: #0B1942
+x  "Up Next" card background #E2E2E2
   calendar background and treatments: #0B1942
   calendar highlighted day: #F5005B
   button background: #F5005B
-  copyright text: #FFFFFF*/
+x  copyright text: #FFFFFF*/
 
 /*BREAKPOINTS
 
@@ -133,25 +133,85 @@ laptop -- 769px -- + and up*/
  order: 4;
 }
 
-.top-container {
-  margin: 20px;
+h1 {
+  color: #0B1942;
+  padding: 0px 25px;
 }
 
-.top-container h1 {
-  color: #0B1942;
+.top-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 1vw;
 }
 
 .top-container h2 {
   background-color: #0B1942;
   color: #FFFFFF;
+  font-weight: 100;
+  font-size: 18px;
+  padding: 5px 0px 5px 10px;
+}
+
+.top-container-text {
+  padding: 2vw;
 }
 
 .base-container {
   background-color: #0B1942;
+  margin-bottom: 20px;
 }
 
 .base-container h1 {
   color: #FFFFFF;
+  padding: 20px;
+}
+
+.base-card {
+  background-color: #E2E2E2;
+  margin: 20px;
+}
+
+.block-buster-text a {
+  font-size: 40px;
+  color: #00D5E7;
+}
+
+#block-buster {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.movie-poster {
+  padding: 20px;
+  width: 44vw;
+}
+
+.block-buster-text {
+  width: 45vw;
+  padding: 20px;
+  margin: 0;
+}
+
+#line-up {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+}
+
+.line-up-image {
+  /*padding: 20px;*/
+  width: 44vw;
+}
+
+.line-up-text {
+  width: 44vw;
+  padding: 0px 20px;
+}
+
+.line-up-text a {
+  font-size: 16px;
+  color: #00D5E7;
 }
 
 /*---------------- Break Code ----------------*/
@@ -175,6 +235,16 @@ laptop -- 769px -- + and up*/
 
   .copy-right a {
     text-align: right;
+  }
+
+  .top-container {
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+
+  #block-buster {
+    justify-content: space-around;
   }
 
 }
